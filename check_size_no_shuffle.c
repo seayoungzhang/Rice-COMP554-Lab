@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 {
 	/*** This is the start of the variables you can play with... ***/
     int size = 1024;			/* The minimum cache size tested for. */
-	int maxSize = pow(2, 20);	/* maximum cache size tested for is 256 MB = 8 bytes per pointer * 2^25 ints */
+    int maxSize = pow(2, 27);	/* maximum cache size tested for is 256 MB = 8 bytes per pointer * 2^25 ints */
     int number_of_trials = 10;	/* How many trials to run to look for the minimum time. */
     int iterations = 1000000;	/* perform one million accesses per test */
 	int FISHER_YATES_SHUFFLE = 0;   /* 0 = no shuffle, 1 = shuffle */
