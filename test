@@ -1,0 +1,16 @@
+#!/bin/bash
+
+gcc check_size_with_shuffle.c -o cache_test_rnd
+gcc check_size_no_shuffle.c -o cache_test_seq
+
+for i in `seq 1 10`;
+do
+	echo 'Running random access test ('$i') ...'
+  	./cache_test_rnd > ./rnd/result_rnd_$i.csv
+done
+
+for i in `seq 1 10`;
+do
+	echo 'Running sequential access test ('$i') ...'
+	./cache_test_seq > ./seq/result_seq_$i.csv
+done
